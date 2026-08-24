@@ -4,32 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#080909">
-  <meta name="description" content="韩易 HAN YI — AIGC Content Creator，专注 AI 影像、视觉开发与视频制作。">
-  <meta property="og:title" content="韩易 HAN YI — AIGC Content Creator">
-  <meta property="og:description" content="AIGC 影像创作、视觉开发与视频制作个人作品集。">
+  <meta name="description" content="韩易 HAN YI — AI Film Director / AI-powered Visual Storyteller，以导演思维探索 AI 辅助影像创作。">
+  <meta property="og:title" content="韩易 HAN YI — AI Film Director">
+  <meta property="og:description" content="AI Film Director Portfolio — 影视创作、AI 影像实验、声音设计与视觉叙事。">
   <meta property="og:type" content="website">
   <meta property="og:image" content="images/hero-2026-2560.webp">
-  <title>韩易 HAN YI — AIGC Content Creator</title>
+  <title>韩易 HAN YI — AI Film Director</title>
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
-<body>
+<body class="view-home">
   <div class="noise" aria-hidden="true"></div>
   <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  <div class="view-transition" aria-hidden="true"><span>HAN YI / PORTFOLIO</span></div>
 
   <header class="site-header" data-header>
-    <a class="brand" href="#top" aria-label="返回首页">
-      <span>H.Y</span><i></i>
+    <a class="brand" href="#home" data-view-target="home" aria-label="返回首页">
+      <span class="brand-home">H.Y</span><span class="brand-back"><b aria-hidden="true">←</b> 返回主页</span><i></i>
     </a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
       <span class="sr-only">打开导航</span>
       <i></i><i></i>
     </button>
     <nav id="site-nav" class="site-nav" aria-label="主导航">
-      <a href="#home"><span>01</span> Home</a>
-      <a href="#projects"><span>02</span> Projects</a>
-      <a href="#about"><span>03</span> About Me</a>
-      <a href="#contact"><span>04</span> Contact</a>
+      <a href="#home" data-view-target="home"><span>01</span> Home</a>
+      <a href="#projects" data-view-target="projects"><span>02</span> Projects</a>
+      <a href="#about" data-view-target="profile"><span>03</span> Profile</a>
+      <a href="#contact" data-view-target="projects" data-scroll-target="contact"><span>04</span> Contact</a>
     </nav>
     <div class="header-status"><i></i> Available for projects</div>
   </header>
@@ -48,112 +49,128 @@
       <div class="hero-copy hero-typing">
         <div class="hero-identity reveal">
           <h1 id="hero-title"><span>HAN YI</span><b>韩易</b></h1>
-          <p>AIGC CONTENT CREATOR</p>
+          <p>AI FILM DIRECTOR</p>
+          <p class="hero-subtitle">AI-POWERED VISUAL STORYTELLER</p>
           <div><span>AI FILM</span><span>VISUAL STORYTELLING</span><span>CREATIVE PRODUCTION</span></div>
+          <p class="hero-director-note">A director exploring new possibilities of visual storytelling through AI technology.<span>通过 AI 技术探索影像叙事的新表达。</span></p>
         </div>
         <div class="hero-typewriter" aria-label="欢迎来到，韩易的个人作品集，所有作品本人全流程制作">
           <p class="typing-kicker"><span data-type-text="欢迎来到" aria-hidden="true">欢迎来到</span></p>
           <p class="typing-title"><span data-type-text="韩易的个人作品集" aria-hidden="true">韩易的个人作品集</span></p>
           <p class="typing-statement"><span data-type-text="所有作品本人全流程制作" aria-hidden="true">所有作品本人全流程制作</span></p>
         </div>
-        <a class="hero-resume" href="documents/han-yi-resume.pdf" target="_blank" rel="noopener">
-          <span>查看简历</span><i aria-hidden="true">↗</i>
-        </a>
+        <div class="hero-portals reveal" aria-label="作品集内容入口">
+          <button type="button" data-view-target="projects">
+            <span><i>01</i><strong>项目作品</strong><small>SELECTED PROJECTS</small></span><b aria-hidden="true">↗</b>
+          </button>
+          <button type="button" data-view-target="profile">
+            <span><i>02</i><strong>个人履历</strong><small>PERSONAL PROFILE</small></span><b aria-hidden="true">↗</b>
+          </button>
+        </div>
       </div>
 
     </section>
 
-    <section id="projects" class="works section-pad" aria-labelledby="works-title">
+    <section id="projects" class="works section-pad" data-view-section="projects" aria-labelledby="works-title">
       <div class="section-kicker reveal">
-        <span>01 / AI VIDEO CREATION</span>
-        <span>CASE ARCHIVE / 2024—2026</span>
+        <span>PROJECT ARCHIVE</span>
+        <span>SELECTED PROJECTS / 2024—2026</span>
       </div>
       <div class="section-heading">
-        <h2 id="works-title" class="reveal">AI 视频创作项目<br><em>AI Video Production</em></h2>
-        <p class="reveal">从世界观和剧本出发，完成分镜、画面制作、实拍、剪辑与交付。四个案例记录了不同类型项目从想法到成片的过程。</p>
+        <h2 id="works-title" class="reveal">项目作品<br><em>Selected Projects</em></h2>
+        <p class="reveal">作品分为视频与音频两个方向。视频项目涵盖 AI 短剧、文旅动画和真人短片；音频项目呈现音乐创作与声音叙事能力。</p>
       </div>
 
-      <article class="featured-archive reveal" data-project>
-        <div class="project-topline"><span>PROJECT 01</span><span>THREE KINGDOMS / FEATURED CASE</span></div>
+      <div class="project-category-heading reveal">
+        <div><span>01 / VIDEO PROJECTS</span><h3>视频项目</h3></div>
+        <p>从世界观、剧本和分镜出发，呈现 AI 影像制作、真人拍摄、剪辑与最终交付。</p>
+      </div>
+
+      <div class="project-archive-stack" data-project-stack>
+      <article class="featured-archive project-fold reveal" style="--project-peek-image: url('images/project-02-cover.webp')" data-project data-project-fold tabindex="0" aria-expanded="false">
+        <div class="project-topline"><span>VIDEO 01</span><span>三国 AI 短剧视觉开发</span><span>AI SHORT DRAMA / FEATURED CASE</span></div>
         <p class="featured-disclaimer">以下仅展示可用于个人求职的局部画面与资产，不涉及片名、主创、平台及未公开剧情。</p>
         <div class="featured-layout">
           <div class="featured-video">
-            <video controls playsinline preload="metadata" poster="images/project-02-cover.png">
-              <source src="project-01-guan-yu.mp4" type="video/mp4">
-              你的浏览器不支持视频播放。
-            </video>
+            <button class="featured-video-trigger" type="button" data-video="project-01-guan-yu.mp4" data-title="三国 AI 短剧视觉开发" aria-label="播放三国 AI 短剧视觉开发">
+              <img src="images/project-02-cover.webp" alt="三国 AI 短剧视觉开发封面" loading="lazy" decoding="async">
+              <span class="featured-play-label"><b>PLAY FILM</b><i aria-hidden="true">↗</i></span>
+            </button>
           </div>
-          <aside class="featured-notes" aria-label="三国 AIGC 项目信息">
-            <p class="featured-confidential">三国 AIGC 项目 / CONFIDENTIAL FILM</p>
-            <h3>港式黑帮质感<br>AI 视频生成</h3>
+          <aside class="featured-notes" aria-label="三国 AI 短剧项目信息">
+            <p class="featured-confidential">AI 短剧视觉开发 / AI SHORT DRAMA</p>
+            <h3>港式黑帮质感<br>AI 影像实验</h3>
             <div class="featured-company">
               <strong>江苏演艺艺术发展有限责任公司</strong>
               <span>项目制 · 2026.07</span>
             </div>
             <dl>
-              <div><dt>本人职责</dt><dd>资产生成、AI 视频生成、版本迭代、画面质检、视频剪辑</dd></div>
-              <div><dt>质量重点</dt><dd>人物真实感、动作连续性、镜头可用性</dd></div>
-              <div><dt>制作方法</dt><dd>先确定人物、场景与镜头关系，再按版本完成生成、筛选、剪辑和质检</dd></div>
-              <div><dt>交付方式</dt><dd>按镜头反馈持续迭代，记录版本与修改依据</dd></div>
+              <div><dt>Role</dt><dd>视觉资产生成、AI 视频制作、版本迭代、画面质检与视频剪辑</dd></div>
+              <div><dt>Focus</dt><dd>人物真实感、动作连续性与镜头可用性</dd></div>
+              <div><dt>Process</dt><dd>确定人物、场景与镜头关系，再完成生成、筛选、剪辑和质检</dd></div>
+              <div><dt>Result</dt><dd>按镜头反馈持续迭代，记录版本与修改依据并完成交付</dd></div>
             </dl>
           </aside>
         </div>
+        <button class="project-fold-toggle" type="button" aria-label="展开三国 AI 短剧案例" aria-expanded="false"><span>OPEN CASE / 展开案例</span><i aria-hidden="true">↓</i></button>
+      </article>
+
+      <article id="liuhe-ai" class="featured-archive liuhe-archive project-fold reveal" style="--project-peek-image: url('images/project-03-cover.webp')" data-project data-project-fold tabindex="0" aria-expanded="false">
+        <div class="project-topline"><span>VIDEO 02</span><span>景区 AI 动画宣传片</span><span>CULTURAL TOURISM / ANIMATED FILM</span></div>
+        <div class="featured-layout">
+          <div class="featured-video">
+            <button class="featured-video-trigger" type="button" data-video="project-03-stone-forest.mp4" data-title="景区 AI 动画宣传片" aria-label="播放景区 AI 动画宣传片">
+              <img src="images/project-03-cover.webp" alt="景区 AI 动画宣传片封面" loading="lazy" decoding="async">
+              <span class="featured-play-label"><b>PLAY FILM</b><i aria-hidden="true">↗</i></span>
+            </button>
+          </div>
+          <aside class="featured-notes" aria-label="景区 AI 动画宣传片项目信息">
+            <p class="featured-confidential">动漫类景区宣传片 / AI FILM PRODUCTION</p>
+            <h3>景区<br>AI 动画宣传片</h3>
+            <div class="featured-company">
+              <strong>南京六合区桂子山石柱林</strong>
+              <span>江苏演艺艺术发展有限责任公司<br>项目制 · 2026.08</span>
+            </div>
+            <dl>
+              <div><dt>Overview</dt><dd>围绕景区自然景观进行动漫化创作，完成角色与场景的动画内容制作</dd></div>
+              <div><dt>Role</dt><dd>AI 视频剪辑与后期整理</dd></div>
+              <div><dt>Process</dt><dd>参与 IP 形象设计和剧本讨论，完成镜头整理、剪辑与版本调整</dd></div>
+              <div><dt>Result</dt><dd>完成景区角色、场景和动画宣传片成片</dd></div>
+            </dl>
+          </aside>
+        </div>
+        <button class="project-fold-toggle" type="button" aria-label="展开景区 AI 动画宣传片案例" aria-expanded="false"><span>OPEN CASE / 展开案例</span><i aria-hidden="true">↓</i></button>
       </article>
 
       <div class="project-list">
-        <article id="liuhe-ai" class="featured-archive liuhe-archive reveal" data-project>
-          <div class="project-topline"><span>PROJECT 02</span><span>CULTURAL TOURISM FILM</span></div>
-          <div class="featured-layout">
-            <div class="featured-video">
-              <video controls playsinline preload="metadata" poster="images/project-03-cover.png">
-                <source src="project-03-stone-forest.mp4" type="video/mp4">
-                你的浏览器不支持视频播放。
-              </video>
-            </div>
-            <aside class="featured-notes" aria-label="六合石柱林 AI 动画宣传片项目信息">
-              <p class="featured-confidential">动漫类景区宣传片 / AI VIDEO GENERATION</p>
-              <h3>石柱林景区<br>AI 动画宣传片</h3>
-              <div class="featured-company">
-                <strong>南京六合区桂子山石柱林</strong>
-                <span>江苏演艺艺术发展有限责任公司<br>项目制 · 2026.08</span>
-              </div>
-              <dl>
-                <div><dt>项目背景</dt><dd>围绕景区自然景观进行动漫化创作，完成角色与场景的动画内容制作</dd></div>
-                <div><dt>本人职责</dt><dd>AI 视频剪辑与后期整理</dd></div>
-                <div><dt>协作内容</dt><dd>参与 IP 形象设计与剧本创作讨论</dd></div>
-                <div><dt>最终成果</dt><dd>完成景区角色、场景和动画宣传片成片</dd></div>
-              </dl>
-            </aside>
-          </div>
-        </article>
-
-        <article id="ai-love" class="project award-project reveal" data-project>
-          <div class="project-topline"><span>PROJECT 03</span><span>AI VIDEO PRODUCTION</span></div>
+        <article id="ai-love" class="project award-project project-fold reveal" style="--project-peek-image: url('images/project-01-cover.webp')" data-project data-project-fold tabindex="0" aria-expanded="false">
+          <div class="project-topline"><span>VIDEO 03</span><span>《爱，AI，唉》</span><span>DIRECTED SHORT FILM / STUDENT AWARDED WORK</span></div>
           <div class="project-grid">
             <div class="project-media">
-              <img src="images/project-01-cover.png" alt="《爱，AI，唉》公益短片正式封面" loading="lazy">
+              <img src="images/project-01-cover.webp" alt="《爱，AI，唉》公益短片正式封面" loading="lazy" decoding="async">
               <div class="award-badge"><span>2026中国好创意暨全国数字艺术设计大赛</span><strong>艺术思辨类 · 国赛一等奖</strong></div>
               <button class="play-button" type="button" data-video="project-03-ai-love-original.mp4" data-title="《爱，AI，唉》">
                 <span>PLAY FULL FILM</span><i>↗</i>
               </button>
             </div>
             <div class="project-copy">
-              <p class="project-number">03</p>
-              <p class="project-type">在校获奖作品 / Student Awarded Work</p>
+              <p class="project-number">VIDEO 03</p>
+              <p class="project-type">导演作品 / Directed Short Film</p>
               <h3>《爱，AI，<em>唉</em>》</h3>
               <div class="project-tags" aria-label="项目职责"><span>Director</span><span>Writer</span><span>Cinematography</span><span>Editor</span></div>
-              <p class="project-summary">从校园生活中的情感关系出发，讨论 AI 陪伴、孤独感与真实关系之间的距离。由我独立完成从剧本到成片的全部制作。</p>
+              <p class="project-summary">从校园生活中的情感关系出发，讨论 AI 陪伴、孤独感与真实关系之间的距离。独立完成从创意、剧本到拍摄和最终剪辑。</p>
             </div>
           </div>
           <div class="case-study">
             <div class="case-block"><span>Project Overview / 项目背景</span><p>以青年视角切入 AI 时代下的情感关系与心理状态，通过校园生活场景，探讨人与技术陪伴、孤独感以及真实关系之间的矛盾。</p></div>
-            <div class="case-block"><span>My Role / 我的职责</span><p>独立完成前期策划、剧本创作、分镜设计、导演、摄影及后期剪辑，实现从创意到成片的完整制作。</p></div>
-            <div class="case-block case-result"><span>Final Result / 最终成果</span><p>获得2026中国好创意暨全国数字艺术设计大赛<br><strong>国赛一等奖</strong>。</p></div>
+            <div class="case-block"><span>Role / 我的职责</span><p>独立完成前期策划、剧本创作、分镜设计、导演、摄影及后期剪辑，实现从创意到成片的完整制作。</p></div>
+            <div class="case-block"><span>Process / 创作过程</span><p>Concept → Script → Storyboard → Production → Final Edit</p></div>
           </div>
+          <button class="project-fold-toggle" type="button" aria-label="展开《爱，AI，唉》案例" aria-expanded="false"><span>OPEN CASE / 展开案例</span><i aria-hidden="true">↓</i></button>
         </article>
 
-        <article id="silent-paper" class="project award-project reveal" data-project>
-          <div class="project-topline"><span>PROJECT 04</span><span>YOUTH STORY / LIVE-ACTION FILM</span></div>
+        <article id="silent-paper" class="project award-project project-fold reveal" style="--project-peek-image: url('images/project-04-silent-paper-cover.jpg')" data-project data-project-fold tabindex="0" aria-expanded="false">
+          <div class="project-topline"><span>VIDEO 04</span><span>《所有火光都曾是沉默的纸》</span><span>YOUTH STORY / LIVE-ACTION FILM</span></div>
           <div class="project-grid">
             <div class="project-media poster-portrait">
               <img src="images/project-04-silent-paper-cover.jpg" alt="《所有火光都曾是沉默的纸》项目海报" loading="lazy">
@@ -163,8 +180,8 @@
               </button>
             </div>
             <div class="project-copy">
-              <p class="project-number">04</p>
-              <p class="project-type">国赛二等奖 · Short Film</p>
+              <p class="project-number">VIDEO 04</p>
+              <p class="project-type">导演作品 / Live-action Short Film</p>
               <h3>所有火光都曾是<br><em>沉默的纸</em></h3>
               <div class="project-tags" aria-label="项目职责"><span>Creative Direction</span><span>Writer</span><span>Cinematography</span><span>Editor</span></div>
               <p class="project-summary">从青年人的真实处境与成长困惑出发，以生活化场景推进人物选择，完成剧本、拍摄与后期制作。</p>
@@ -172,44 +189,131 @@
           </div>
           <div class="case-study">
             <div class="case-block"><span>Project Overview / 项目背景</span><p>以青年成长过程中的迷茫、选择与自我寻找为主题，从青年视角出发完成剧本创作与影像表达。</p></div>
-            <div class="case-block"><span>My Role / 我的职责</span><p>主导完成项目全流程制作，包括前期策划、剧本创作、拍摄执行与后期制作。</p></div>
-            <div class="case-block case-result"><span>Final Result / 最终成果</span><p>获得中国好创意暨全国数字艺术设计大赛<br><strong>国赛二等奖</strong>。</p></div>
+            <div class="case-block"><span>Role / 我的职责</span><p>主导完成项目全流程制作，包括前期策划、剧本创作、拍摄执行与后期制作。</p></div>
+            <div class="case-block"><span>Process / 创作过程</span><p>Concept → Script → Storyboard → Production → Final Edit</p></div>
           </div>
+          <button class="project-fold-toggle" type="button" aria-label="展开《所有火光都曾是沉默的纸》案例" aria-expanded="false"><span>OPEN CASE / 展开案例</span><i aria-hidden="true">↓</i></button>
+        </article>
+      </div>
+      </div>
+
+    <section id="audio" class="audio-section project-subsection" aria-labelledby="audio-title">
+      <div class="section-kicker reveal"><span>02 / AUDIO PROJECTS</span><span>MUSIC COMPOSITION / SOUND DESIGN</span></div>
+      <div class="section-heading">
+        <h2 class="reveal">音频项目<br><em>Audio Projects</em></h2>
+        <p class="reveal">从音乐表演训练出发，为影像与文化主题设计旋律、结构和情绪，让声音参与叙事。</p>
+      </div>
+      <div class="audio-showcase reveal">
+        <div class="audio-heading"><div class="audio-award"><span>中国国际大学生创新大赛（2026）·（小挑战杯）</span><strong>省赛特等奖</strong></div><h3 id="audio-title">《淮声新韵——传好唱响地方戏的青春实践》</h3><p><strong>项目定位</strong>　结合音乐表演专业背景，为地方文化主题设计具有当代表达的音乐内容。<br><br><strong>我的职责</strong>　负责音乐风格设定、旋律方向设计、生成辅助、版本筛选和后期调整。<br><br><strong>制作方式</strong>　从项目主题和画面情绪出发，反复筛选旋律，调整歌曲结构、节奏与情绪走向，使音乐与叙事保持一致。</p></div>
+        <div class="audio-list">
+          <article><div><span>TRACK 01</span><h4>《九龙口》R&amp;B 版</h4></div><audio controls preload="none" src="audio/jiulongkou-rnb.mp3">你的浏览器不支持音频播放。</audio></article>
+          <article><div><span>TRACK 02</span><h4>《九龙口》合唱版</h4></div><audio controls preload="none" src="audio/jiulongkou-ensemble.mp3">你的浏览器不支持音频播放。</audio></article>
+        </div>
+      </div>
+    </section>
+    </section>
+
+    <section id="about" class="about profile-page section-pad" data-view-section="profile" aria-labelledby="about-title">
+      <div class="resume-sheet">
+        <header class="resume-heading reveal">
+          <div class="resume-title-row"><span>02</span><div><p>ABOUT</p><h2 id="about-title">个人履历</h2></div></div>
+          <p>有音乐表演背景，也持续进行影像、短视频与 AIGC 内容创作。</p>
+        </header>
+
+        <p class="resume-lead reveal">我是 <strong>韩易（HAN YI）</strong>，一名专注于 <em>AIGC 内容创作与影视编导方向</em> 的创作者。</p>
+
+        <div class="resume-facts reveal" aria-label="个人能力概览">
+          <div><strong>音乐表演</strong><span>专业背景</span></div>
+          <div><strong>全流程</strong><span>内容生产</span></div>
+          <div><strong>AI × FILM</strong><span>创作方向</span></div>
+        </div>
+
+        <article class="resume-card reveal">
+          <header class="resume-card-head">
+            <img src="images/han-yi-portrait.jpg" alt="韩易个人照片" loading="lazy" decoding="async">
+            <div><h3>韩易</h3><p>AI FILM DIRECTOR / AIGC CONTENT CREATOR</p><span>Visual Storytelling · Creative Production</span></div>
+          </header>
+
+          <div class="resume-bio">
+            <p class="resume-bio-label">PERSONAL STATEMENT / 个人自述</p>
+            <p>我的创作从捕捉未说出口的情绪开始。敏感曾被视为负担，如今却成为理解人物与世界的切口。</p>
+            <p>音乐表演的训练，让我的创作学会从节奏、声音和留白中辨认情绪，并安放那些强烈的感受。当延伸至影像，模糊的情绪找到了具体的人物、场景、对白和镜头。创作成为整理经验、靠近他人的通道。</p>
+            <p>从日常关系和个体处境中提取母题，借助剧本、分镜、AI 辅助、剪辑与声音设计，将感受转化为可视听的作品。不止于呈现情绪，更追溯其根源，以及它与当下生活的关联。</p>
+            <p>一路走来，创作学会的不只是完成一部片子，更是把感受变成判断，把情绪变成行动，把行动变成作品。这是它真正的起点。</p>
+          </div>
+
+          <section class="resume-section">
+            <h3>个人优势</h3>
+            <ul class="resume-advantages">
+              <li><strong>情绪洞察与叙事转化：</strong>能够从日常经验、人物关系与个体情绪中提取创作母题，并将模糊的感受转化为可执行的故事、场景与视听方案。</li>
+              <li>从音乐训练出发，关注声音、节奏、情绪与画面之间的关系。</li>
+              <li>具备从前期构思、AI 辅助制作到剪辑与声音设计的完整流程意识。</li>
+              <li>把 AI 作为拓展想象边界的新媒介，而不是替代创作者的工具。</li>
+            </ul>
+          </section>
+
+          <section class="resume-section resume-emotional-works">
+            <div class="resume-section-heading">
+              <h3>情绪叙事作品</h3>
+              <span>EMOTIONAL STORYTELLING</span>
+            </div>
+            <p class="resume-section-intro">我从生活中可感知的情绪与问题出发，把抽象感受转化为人物处境、叙事行动和具体影像。以下两部作品记录了这一创作方法。</p>
+            <div class="resume-video-grid">
+              <article class="resume-video-card">
+                <div class="resume-video-frame">
+                  <iframe src="https://player.bilibili.com/player.html?bvid=BV1894y1t7Wk&page=1&high_quality=1&danmaku=0" title="播放《也许，在她心中，我和这桶泡面没什么两样》" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="resume-video-copy">
+                  <span>01 / EMOTIONAL SHORT</span>
+                  <h4>“也许，在她心中，我和这桶泡面没什么两样”</h4>
+                  <p>从日常物件与关系感受切入，将难以直说的情绪转化为具体情境与观看体验。</p>
+                  <a href="https://www.bilibili.com/video/BV1894y1t7Wk/" target="_blank" rel="noopener noreferrer">在 B 站打开 <b aria-hidden="true">↗</b></a>
+                </div>
+              </article>
+              <article class="resume-video-card">
+                <div class="resume-video-frame">
+                  <iframe src="https://player.bilibili.com/player.html?bvid=BV11v411F77c&page=1&high_quality=1&danmaku=0" title="播放《朋友，生活的意义是什么？》" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="resume-video-copy">
+                  <span>02 / EMOTIONAL SHORT</span>
+                  <h4>“朋友，生活的意义是什么？”</h4>
+                  <p>从关于生活意义的提问出发，通过故事和视听节奏承载抽象命题与真实情绪。</p>
+                  <a href="https://www.bilibili.com/video/BV11v411F77c/" target="_blank" rel="noopener noreferrer">在 B 站打开 <b aria-hidden="true">↗</b></a>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="resume-section">
+            <h3>创作实践</h3>
+            <div class="resume-practice-list">
+              <article><span>01</span><div><h4>公益广告</h4><p>从青年视角出发进行主题构思、剧本创作、拍摄与后期制作。</p></div></article>
+              <article><span>02</span><div><h4>文化宣传片</h4><p>参与文化内容、景区动画和地方主题项目的视觉与影像制作。</p></div></article>
+              <article><span>03</span><div><h4>AI 短片</h4><p>探索角色、场景、视觉资产、视频生成与最终剪辑的协作流程。</p></div></article>
+            </div>
+          </section>
+
+          <section class="resume-section resume-direction">
+            <h3>创作方向</h3>
+            <p class="resume-role">AIGC Content Creator<br>Video Director</p>
+            <ul><li>AI 影视内容创作</li><li>视觉叙事设计</li><li>短视频内容开发</li><li>人机协作创作流程</li></ul>
+          </section>
+
+          <section class="resume-section resume-philosophy">
+            <h3>创作理念</h3>
+            <blockquote>从创意，到分镜；<br><em>从生成，到成片。</em></blockquote>
+            <p>我关注的不只是“生成一张好看的图片”，而是如何让画面服务故事，让技术服务表达。</p>
+          </section>
+
+          <footer class="resume-future">
+            <p>未来，我希望继续探索 <strong>人工智能 × 影视创作 × 视听表达</strong> 的可能性，用技术辅助创意，用影像记录人与时代之间的连接。</p>
+          </footer>
         </article>
       </div>
     </section>
 
-    <section id="audio" class="audio-section section-pad" aria-labelledby="audio-title">
-      <div class="section-kicker reveal"><span>02 / AUDIO CREATION</span><span>AI MUSIC / SUNO EXPERIMENTS</span></div>
-      <div class="section-heading">
-        <h2 class="reveal">音频创作项目<br><em>Audio Production</em></h2>
-        <p class="reveal">结合音乐表演专业背景与 AI 音乐生成工具，完成文化内容主题音乐创作实验。</p>
-      </div>
-      <div class="audio-showcase reveal">
-        <div class="audio-heading"><div class="audio-award"><span>中国国际大学生创新大赛（2026）·（小挑战杯）</span><strong>省赛特等奖</strong></div><h3 id="audio-title">《淮声新韵——传好唱响地方戏的青春实践》</h3><p><strong>项目定位</strong>　结合音乐表演专业背景与 AI 音乐生成工具，完成文化内容主题音乐创作实验。<br><br><strong>我的职责</strong>　在项目中负责音频创作部分，包括音乐风格设定、旋律方向设计、AI 辅助生成、版本筛选以及后期调整。<br><br><strong>制作方式</strong>　结合音乐专业训练，使用 Suno、Logic 完成歌曲生成与后期处理，并进行人工筛选、结构调整和情绪优化，使音乐符合项目主题与画面需要。</p></div>
-        <div class="audio-list">
-          <article><div><span>TRACK 01</span><h4>《九龙口》R&amp;B 版</h4></div><audio controls preload="metadata" src="audio/jiulongkou-rnb.mp3">你的浏览器不支持音频播放。</audio></article>
-          <article><div><span>TRACK 02</span><h4>《九龙口》合唱版</h4></div><audio controls preload="metadata" src="audio/jiulongkou-ensemble.mp3">你的浏览器不支持音频播放。</audio></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="workflow" class="pipeline section-pad" aria-labelledby="pipeline-title">
-      <div class="pipeline-heading">
-        <div class="reveal"><p>03 / WORKFLOW</p><h2 id="pipeline-title">工作流程</h2></div>
-        <p class="reveal">每一步都有明确产物，可审查、可修改、可交付。</p>
-      </div>
-      <ol class="pipeline-grid">
-        <li class="reveal"><span>01</span><h3>内容拆解</h3><p>主题、受众、人物关系、核心冲突与观看场景。</p></li>
-        <li class="reveal"><span>02</span><h3>分镜设计</h3><p>景别、动作、声音、转场与镜头节奏。</p></li>
-        <li class="reveal"><span>03</span><h3>AI 资产生成</h3><p>角色、场景、道具、风格锚点与版本控制。</p></li>
-        <li class="reveal"><span>04</span><h3>视频生成与剪辑</h3><p>镜头迭代、素材筛选、剪辑、配音与配乐。</p></li>
-        <li class="reveal"><span>05</span><h3>后期交付</h3><p>连续性检查、画面质检、合规与文件归档。</p></li>
-      </ol>
-    </section>
-
-    <section id="creator-account" class="creator-account section-pad" aria-labelledby="creator-title">
-      <div class="section-kicker reveal"><span>04 / CREATOR ACCOUNT</span><span>CONTINUOUS CONTENT PRODUCTION</span></div>
+    <section id="creator-account" class="creator-account section-pad" data-view-section="projects" aria-labelledby="creator-title">
+      <div class="section-kicker reveal"><span>03 / CREATOR ACCOUNT</span><span>CONTINUOUS CONTENT PRODUCTION</span></div>
       <div class="creator-heading">
         <h2 id="creator-title" class="reveal">自媒体账号<br><em>Creator Account</em></h2>
         <p class="reveal">持续运营的情感类 AI 漫画账号，通过图文形式完成观点表达与用户互动。</p>
@@ -217,7 +321,7 @@
       <div class="creator-layout">
         <div class="creator-copy reveal">
           <p class="creator-label">ACCOUNT POSITIONING / 账号定位</p>
-          <h3>AI 漫画 /<br>情感类图文账号</h3>
+          <h3>AI 漫画 / <span>情感类图文账号</span></h3>
           <dl>
             <div><dt>账号类型</dt><dd>AI 漫画 / 情感类图文内容账号</dd></div>
             <div><dt>内容方向</dt><dd>围绕青年情绪、关系、人际观察等主题，通过 AI 漫画结合文字表达进行内容创作</dd></div>
@@ -225,53 +329,43 @@
           </dl>
         </div>
         <div class="account-snapshot reveal" aria-label="自媒体账号数据快照">
-          <div class="account-profile"><span class="account-avatar"><img src="images/creator-avatar.png" alt="茴香料账号头像"></span><div><span>AI COMIC / EMOTIONAL CONTENT</span><strong>茴香料</strong></div></div>
-          <div class="creator-gallery" aria-label="AI 漫画账号作品展示">
-            <img src="images/creator-comic-01.png" alt="AI 漫画作品：职场回礼话题" loading="lazy">
-            <img src="images/creator-comic-02.png" alt="AI 漫画作品：青年与家庭关系" loading="lazy">
-            <img src="images/creator-comic-03.png" alt="AI 漫画作品：父母关系与成长记忆" loading="lazy">
-            <img src="images/creator-comic-04.png" alt="AI 漫画作品：独处与自我和解" loading="lazy">
+          <div class="account-profile"><span class="account-avatar"><img src="images/creator-avatar.webp" alt="茴香料账号头像" loading="lazy" decoding="async"></span><div><span>AI COMIC / EMOTIONAL CONTENT</span><strong>茴香料</strong></div></div>
+          <div class="account-snapshot-grid">
+            <figure class="account-original-shot">
+              <img src="images/creator-account-original.webp" alt="茴香料抖音账号主页原图" loading="lazy" decoding="async">
+              <figcaption>ORIGINAL ACCOUNT SCREENSHOT / 账号主页</figcaption>
+            </figure>
+            <div class="account-evidence">
+              <div class="creator-gallery" aria-label="AI 漫画账号作品展示">
+                <img src="images/creator-comic-01.webp" alt="AI 漫画作品：职场回礼话题" loading="lazy" decoding="async">
+                <img src="images/creator-comic-02.webp" alt="AI 漫画作品：青年与家庭关系" loading="lazy" decoding="async">
+                <img src="images/creator-comic-03.webp" alt="AI 漫画作品：父母关系与成长记忆" loading="lazy" decoding="async">
+                <img src="images/creator-comic-04.webp" alt="AI 漫画作品：独处与自我和解" loading="lazy" decoding="async">
+              </div>
+              <div class="account-metrics">
+                <article><strong>20万+</strong><span>单条最高播放量</span></article>
+                <article><strong>1万+</strong><span>最高点赞</span></article>
+                <article><strong>500+</strong><span>评论</span></article>
+                <article><strong>1000+</strong><span>转发</span></article>
+              </div>
+              <p>持续运营的情感类 AI 漫画账号，通过图文形式完成观点表达与用户互动。</p>
+            </div>
           </div>
-          <div class="account-metrics">
-            <article><strong>20万+</strong><span>单条最高播放量</span></article>
-            <article><strong>1万+</strong><span>最高点赞</span></article>
-            <article><strong>500+</strong><span>评论</span></article>
-            <article><strong>1000+</strong><span>转发</span></article>
-          </div>
-          <p>持续运营的情感类 AI 漫画账号，通过图文形式完成观点表达与用户互动。</p>
         </div>
       </div>
     </section>
 
-    <section id="about" class="about section-pad" aria-labelledby="about-title">
-      <div class="section-kicker reveal"><span>05 / ABOUT ME</span><span>HAN YI / AIGC CONTENT CREATOR</span></div>
-      <div class="resume-profile reveal">
-        <a class="resume-preview" href="documents/han-yi-resume.pdf" target="_blank" rel="noopener" aria-label="打开韩易个人简历 PDF">
-          <img src="images/han-yi-resume-preview.png" alt="韩易个人简历预览" loading="lazy">
-        </a>
-        <div class="resume-panel">
-          <div class="resume-summary">
-            <p>AVAILABLE FOR WORK</p>
-            <h2 id="about-title">韩易</h2>
-            <span>AIGC 内容创作 / AI 影视制作 / 视频剪辑与后期</span>
-            <a class="resume-download" href="documents/han-yi-resume.pdf" target="_blank" rel="noopener">查看中文简历 <i>↗</i></a>
-          </div>
-          <dl class="resume-details">
-            <div><dt>电话</dt><dd><a href="tel:13861478006">138 6147 8006</a></dd></div>
-            <div><dt>邮箱</dt><dd><a href="mailto:2737729285@qq.com">2737729285@qq.com</a></dd></div>
-            <div><dt>工具</dt><dd>剪映 / Premiere Pro / Logic Pro</dd></div>
-            <div><dt>AIGC</dt><dd>ChatGPT / Midjourney / Kling AI / LibTV / Suno</dd></div>
-          </dl>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="contact" aria-labelledby="contact-title">
-      <p class="contact-kicker reveal">06 / CONTACT — OPEN FOR OPPORTUNITIES &amp; COLLABORATION</p>
+    <section id="contact" class="contact" data-view-section="shared" aria-labelledby="contact-title">
+      <p class="contact-kicker reveal">04 / CONTACT — OPEN FOR OPPORTUNITIES &amp; COLLABORATION</p>
       <h2 id="contact-title" class="reveal">Let’s create<br><em>the next story.</em></h2>
       <a class="contact-mail reveal" href="mailto:2737729285@qq.com">
         <span>2737729285@QQ.COM</span><i>↗</i>
       </a>
+      <div class="contact-links reveal" aria-label="Professional links">
+        <span>PROFESSIONAL LINKS</span>
+        <a href="#projects" data-view-target="projects">Selected Works ↗</a>
+        <a href="#creator-account" data-view-target="projects" data-scroll-target="creator-account">Creator Account ↗</a>
+      </div>
       <div class="contact-footer">
         <span>HAN YI © 2026</span>
         <div><a href="#top">BACK TO TOP ↑</a></div>
@@ -283,7 +377,8 @@
   <dialog class="video-modal" aria-labelledby="modal-title">
     <button class="modal-close" type="button" aria-label="关闭视频">×</button>
     <div class="modal-frame">
-      <video controls playsinline></video>
+      <div class="modal-loading" aria-live="polite">正在加载高清影片…</div>
+      <video controls playsinline preload="none"></video>
     </div>
     <div class="modal-meta">
       <span>FILM PREVIEW</span>
